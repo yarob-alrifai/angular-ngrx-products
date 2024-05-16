@@ -1,0 +1,39 @@
+
+
+  <mat-tab-group dynamicHeight>
+    <div *ngFor="let category of objectKeys(productsWithCategory)">
+      <mat-tab [label]="category" class="bg-gray-500">
+
+<div class="p-10 ">
+          <app-list-item-product   [products]="productsWithCategory[category]" class="example-large-box mat-elevation-z4"></app-list-item-product>
+        </div>
+      </mat-tab>
+    </div>
+  </mat-tab-group>
+
+
+  <!-- this all right -->
+
+<!-- <div *ngIf="(error$ | async) ">{{error$ | async}}</div>
+<div *ngIf="(loading$ | async) else Product">Loading Data !!!</div>
+<ng-template #Product>
+  <div *ngIf="(products$ | async) as products">
+    <app-list-item-product [products]="products"></app-list-item-product>
+  </div>
+</ng-template> -->
+
+
+<!-- <div *ngFor="let category of yarob; let i = index">
+
+{{yarob[i] | json}}
+
+<button (click)="onAdd(yarob[i])">add</button> tthdf:  {{yarob[i].quantity }}    </div> -->
+<!-- @for (product of products$ | async ; track product.id; let i = $index, e = $even) {
+  {{product|json}}
+  <button (click)="onAdd(product)">add</button>
+
+
+} -->
+
+
+

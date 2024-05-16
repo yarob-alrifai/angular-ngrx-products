@@ -1,0 +1,36 @@
+<div class="items-center grid antialiased text-gray-900">
+  <div  (click)="openDialog(item)">
+    <img  [src]="item.imageUrl" alt=" random imgee"
+      class="w-full h-40 object-cover object-center rounded-lg shadow-md" />
+    <div class="relative px-2 -mt-10">
+      <div class="px-2 pt-2 pb-2 bg-white drop-shadow-md rounded-xl min-h-28 flex-col grid content-between">
+        <div >
+          <div class="flex justify-between items-center">
+            <span class="bg-slate-300 rounded-md px-1">{{
+              item.category
+              }}</span>
+            <div class="text-red-500">
+              <span class="text-sm font-extrabold"> {{ item.price }} </span><span
+                class="text-green-600 text-xs">€</span>
+            </div>
+          </div>
+          <div class="text-gray-900 text-xl">
+            {{
+            item.name.length > 14
+            ? (item.name | slice : 0 : 14) + ".."
+            : item.name
+            }}
+          </div>
+          <p class="text-gray-500 text-left">
+            {{
+            item.description.length > 50
+            ? (item.description | slice : 0 : 50) + "..."
+            : item.description
+            }}
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

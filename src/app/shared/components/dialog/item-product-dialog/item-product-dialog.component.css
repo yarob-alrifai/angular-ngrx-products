@@ -1,0 +1,136 @@
+/* WHEN RADIO BUTTON IS CHECKED */
+
+
+/* ::ng-deep .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-inner-circle {
+    visibility: hidden;
+}
+
+::ng-deep .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    visibility: hidden;
+} */
+
+
+/* WHEN RADIO BUTTON IS NOT CHECKED */
+
+
+/* ::ng-deep .mat-radio-button.mat-accent .mat-radio-outer-circle {
+    visibility: hidden;
+}
+
+::ng-deep .mat-radio-button.mat-accent .mat-radio-inner-circle {
+    visibility: hidden;
+} */
+
+
+/* HIDE THE RIPPLE  FOR RADIO*/
+
+
+/* ::ng-deep .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+    visibility: hidden;
+} */
+
+
+/* CHANGE THE COLOR FOR RADIO AFTER CHECKED */
+
+.mat-radio-button.mat-accent.mat-radio-checked {
+  background: #9D0208;
+  color: white;
+  box-shadow: 10px;
+}
+
+:host ::ng-deep .mat-radio-container {
+  height: 0px;
+  width: 0px;
+  visibility: hidden;
+}
+
+:host ::ng-deep .mat-radio-label-content {
+  width: 100%;
+  padding-left: 0%;
+}
+
+
+/* ::ng-deep .mat-radio-button.mat-accent.mat-radio-checked .gre {
+background: #ff9b9e;
+color: white;
+box-shadow: 10px;
+} */
+
+
+/************************* CHECK BOX **************************/
+
+:host ::ng-deep .mat-checkbox-inner-container {
+  height: 0px;
+  width: 0px;
+  visibility: hidden;
+}
+
+
+/* :host ::ng-deep .mat-checkbox-inner-container {
+  height: 0px;
+  width: 0px;
+  visibility: hidden;
+} */
+
+:host ::ng-deep .mat-checkbox-inner-container {
+  height: 0px;
+  width: 0px;
+  margin: 0px;
+  visibility: hidden;
+}
+
+:host ::ng-deep .mat-checkbox-layout {
+  width: 100%;
+  padding: 0px;
+}
+
+:host ::ng-deep .mat-checkbox-label {
+  width: 100%;
+  padding: 0%;
+  margin: 0%;
+}
+
+::ng-deep .mat-checkbox-checked {
+  background: #9D0208;
+}
+
+::ng-deep .mat-checkbox-checked .mat-checkbox-label {
+  color: white;
+}
+
+:ng-deep .mat-checkbox-disabled {
+  color: rgb(0, 0, 0);
+}
+
+.back-btn {
+  /* height: 100px;
+width: 100px; */
+  position: fixed;
+  display: inline-block;
+  /* box-sizing: border-box;
+border: 3px solid #FFF;
+border-radius: 50%; */
+  /* opacity: .7; */
+  ;
+}
+
+
+/* ************************************************************dialog************************************************************* */
+
+:host ::ng-deep .mat-dialog-content {
+  padding: 0px;
+  max-height: max-content;
+}
+::ng-deep .mdc-dialog .mdc-dialog__content {
+  padding: 0;
+}
+
+/* :host ::ng-deep .mat-dialog-container {
+  padding-top: 0px;
+} */
+
+/* ::ng-deep .mat-dialog-container {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-radius: 10px;
+} */

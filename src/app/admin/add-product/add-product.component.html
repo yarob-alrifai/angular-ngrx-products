@@ -1,0 +1,29 @@
+<!-- add-product.component.html -->
+
+<div class="max-w-md mx-auto mt-8">
+  <h2 class="text-2xl font-semibold mb-4">Add Product</h2>
+  <form (ngSubmit)="onSubmit()" class="space-y-4">
+    <div>
+      <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+      <input type="text" id="name" name="name" [(ngModel)]="newProduct.name" class="w-full border border-gray-300 rounded-md px-3 py-2">
+    </div>
+    <div>
+      <label for="category" class="block text-sm font-medium text-gray-700">Category</label>
+      <input type="text" id="category" name="category" [(ngModel)]="newProduct.category" class="w-full border border-gray-300 rounded-md px-3 py-2">
+    </div>
+    <div>
+      <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
+      <textarea id="description" name="description" [(ngModel)]="newProduct.description" class="w-full border border-gray-300 rounded-md px-3 py-2"></textarea>
+    </div>
+    <div>
+      <label for="price" class="block text-sm font-medium text-gray-700">Price</label>
+      <input type="number" id="price" name="price" [(ngModel)]="newProduct.price" class="w-full border border-gray-300 rounded-md px-3 py-2">
+    </div>
+
+<div class="my-4">
+  <app-button type="submit" buttonColor="primary"  >Add Product</app-button>
+
+</div>
+
+  </form>
+</div>

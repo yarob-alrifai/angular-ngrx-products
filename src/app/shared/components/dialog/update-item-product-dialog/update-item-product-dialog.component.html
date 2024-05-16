@@ -1,0 +1,32 @@
+<div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+  <div class="bg-white p-6 rounded-lg shadow-lg w-[35rem]">
+    <h1 class="text-2xl font-bold mb-4">Update Product</h1>
+    <div class="mb-4">
+      <label for="productName" class="block text-sm font-medium text-gray-700">Product Name</label>
+      <input id="productName" class="w-full border border-gray-300 rounded-md px-3 py-2" [(ngModel)]="item.name" placeholder="{{item.name}}">
+    </div>
+    <div class="mb-4">
+      <label for="productPrice" class="block text-sm font-medium text-gray-700">Product Price</label>
+      <input id="productPrice" class="w-full border border-gray-300 rounded-md px-3 py-2" [(ngModel)]="item.price" placeholder="{{item.price}}">
+    </div>
+    <div class="mb-4">
+      <label for="productDescription" class="block text-sm font-medium text-gray-700">Product Description</label>
+      <textarea id="description" name="description" [(ngModel)]="item.description" placeholder="{{item.description}}" class="w-full border border-gray-300 rounded-md px-3 py-2"></textarea>
+
+    </div>
+    <div class="mb-4">
+      <label for="productCategory" class="block text-sm font-medium text-gray-700">Product Category</label>
+      <input id="productCategory" class="w-full border border-gray-300 rounded-md px-3 py-2" [(ngModel)]="item.category" placeholder="{{item.category}}">
+    </div>
+   <!-- Add input field for selecting an image -->
+
+  <div class="flex justify-end">
+
+    <app-button type="submit" buttonColor="warn" class="mx-1"   (click)="onNoClick()" >Cancel</app-button>
+    <app-button type="submit" buttonColor="primary"  class="mx-1"  (click)="onUpload()">Update</app-button>
+
+    <!-- <button class="bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded mr-2" (click)="onNoClick()">Cancel</button>
+    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" (click)="onUpload()">Update</button> -->
+  </div>
+</div>
+</div>
