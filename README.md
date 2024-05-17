@@ -1,48 +1,83 @@
 # Angular NgRx Products
 
-This project is a demonstration of using NgRx to manage product-related actions such as adding, editing, updating, and deleting products. It includes a frontend built with Angular, Angular Material, Tailwind CSS, and NgRx, and a backend powered by JSON Server.
+This project demonstrates using NgRx to manage product-related actions such as adding, editing, updating, and deleting products. It includes a frontend built with Angular, Angular Material, Tailwind CSS, and NgRx, with a backend powered by JSON Server.
 
 ## Features
 
 - **Product Management**: Administrators can add, edit, update, and delete products.
-- **Dynamic Display**: Products are displayed dynamically based on their categories.
-- **Shared Components**: Shared components such as buttons, dialogs, and pipes are included for consistent UI elements across the application.
-- **Angular Material**: Angular Material is used for UI components such as buttons, dialogs, navbar, and tabs.
-- **Tailwind CSS**: Tailwind CSS is used for styling to create a responsive and visually appealing UI.
-- **NgRx**: NgRx is used for state management, including actions, effects, reducers, and selectors.
-- **Faker**: Faker is used to generate dummy data for demonstration purposes.
+- **Dynamic Display**: Products are dynamically displayed based on their categories.
+- **Shared Components**: Includes shared components like buttons, dialogs, and pipes for consistent UI elements across the application.
+- **Angular Material**: Utilized for UI components such as buttons, dialogs, navbar, and tabs.
+- **Tailwind CSS**: Used for styling to create a responsive and visually appealing UI.
+- **NgRx**: State management using NgRx, including actions, effects, reducers, and selectors.
+- **Faker**: Used to generate dummy data for demonstration purposes.
+
+## Technologies Used
+
+- Angular
+- Angular Material
+- Tailwind CSS
+- NgRx
+- RxJS
+- Faker
+- JSON Server
 
 ## Getting Started
 
 To get started with this project, follow these steps:
 
-1. Clone this repository to your local machine.
-2. Install dependencies by running `npm install`.
-3. Start the JSON Server backend by running `npm run server`.
-4. Start the Angular frontend by running `npm start`.
-5. Open your browser and navigate to `http://localhost:4200` to view the application.
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/yarob-alrifai/angular-ngrx-products.git
+    cd angular-ngrx-products
+    ```
 
-## Commands
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-- `npm start`: Start the Angular development server.
-- `npm run build`: Build the Angular application for production.
-- `npm run server`: Start the JSON Server backend.
-- `npm run generate`: Generate dummy data using Faker and store it in the `database.json` file.
+3. **Generate dummy data**:
+    ```bash
+    npm run generate
+    ```
 
-## Technologies Used
+4. **Start the JSON Server backend**:
+    ```bash
+    npm run server
+    ```
 
-- Angular
-- NgRx
-- RxJS
-- Faker
-- JSON Server
-- Angular Material
-- Tailwind CSS
+5. **Start the Angular frontend**:
+    ```bash
+    npm start
+    ```
 
-## Contributing
+6. **Open your browser and navigate to** `http://localhost:4200`
 
-Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+## Project Structure
+
+- **store/**: Contains the NgRx state management files including actions, effects, reducers, and selectors for products.
+- **shared/**: Contains shared components, dialogs, and pipes used across the application.
+- **services/**: Contains the service used to connect to the JSON server and manage product data.
+- **components/**: Contains Angular components for product display and administration.
+
+## Scripts
+
+- `npm start`: Starts the Angular development server.
+- `npm run build`: Builds the Angular application.
+- `npm run test`: Runs tests.
+- `npm run generate`: Generates dummy data using Faker.
+- `npm run server`: Starts the JSON Server backend.
+- `npm run dev`: Runs both the JSON Server backend and Angular development server concurrently.
+
+## Additional Notes
+
+- **NgRx**: Used for managing the state of products, including actions for fetching, adding, updating, and deleting products.
+- **Angular Material**: Provides a rich set of UI components for a consistent look and feel.
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
+- **JSON Server**: Simple backend for prototyping and development purposes.
+- **Faker**: Generates dummy data for the product list.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
