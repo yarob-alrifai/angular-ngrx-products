@@ -12,7 +12,7 @@
 <meta  name="description"  content="This project demonstrates using NgRx to manage product-related actions such as adding, editing, updating, and deleting products. It includes a frontend built with Angular, Angular Material, Tailwind CSS, and NgRx, with a backend powered by JSON Server.">
 
 <meta  name="keywords"  content="Angular, NgRx, Angular Material, Tailwind CSS, JSON Server, CRUD, Product Management">
-<title>Angular NgRx Products</title>
+
 
 </head>
 
