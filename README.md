@@ -2,6 +2,16 @@
 
 This project demonstrates using NgRx to manage product-related actions such as adding, editing, updating, and deleting products. It includes a frontend built with Angular, Angular Material, Tailwind CSS, and NgRx, with a backend powered by JSON Server.
 
+## Usage
+
+### Product Management
+
+The application allows you to manage products, including adding, editing, and deleting products. Products are displayed in a list format with a tab bar to filter products by category.
+
+### Admin Page
+
+The admin page provides functionality for administrators to manage products, including adding new products, editing existing ones, and deleting products.
+
 ## Features
 
 - **Product Management**: Administrators can add, edit, update, and delete products.
@@ -76,15 +86,7 @@ To get started with this project, follow these steps:
 - **services/**: Contains the service used to connect to the JSON server and manage product data.
 - **components/**: Contains Angular components for product display and administration.
 
-## Usage
 
-### Product Management
-
-The application allows you to manage products, including adding, editing, and deleting products. Products are displayed in a list format with a tab bar to filter products by category.
-
-### Admin Page
-
-The admin page provides functionality for administrators to manage products, including adding new products, editing existing ones, and deleting products.
 
 ## Folder Structure
 
