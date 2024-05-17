@@ -22,6 +22,13 @@ This project demonstrates using NgRx to manage product-related actions such as a
 - Faker
 - JSON Server
 
+  
+## Screenshots
+
+![Product List](./screenshots/product-list.png)
+![Admin Page 1](./screenshots/admin-page-1.png)
+![Admin Page 1](./screenshots/admin-page-2.png)
+
 ## Getting Started
 
 To get started with this project, follow these steps:
