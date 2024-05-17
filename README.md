@@ -1,21 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This project demonstrates using NgRx to manage product-related actions such as adding, editing, updating, and deleting products. It includes a frontend built with Angular, Angular Material, Tailwind CSS, and NgRx, with a backend powered by JSON Server.">
+    <meta name="keywords" content="Angular, NgRx, Angular Material, Tailwind CSS, JSON Server, CRUD, Product Management">
+    <title>Angular NgRx Products</title>
+</head>
+<body>
+# Angular NgRx Products
 
-    # Angular NgRx Products
+ This project demonstrates using NgRx to manage product-related actions such as adding, editing, updating, and deleting products. It includes a frontend built with Angular, Angular Material, Tailwind CSS, and NgRx, with a backend powered by JSON Server.
 
-    This project demonstrates using NgRx to manage product-related actions such as adding, editing, updating, and deleting products. It includes a frontend built with Angular, Angular Material, Tailwind CSS, and NgRx, with a backend powered by JSON Server.
+  ## Usage
 
-    ## Usage
+  ### Product Management
 
-    ### Product Management
-
-    The application allows you to manage products, including adding, editing, and deleting products. Products are displayed in a list format with a tab bar to filter products by category.
-
+  The application allows you to manage products, including adding, editing, and deleting products. Products are displayed in a list format with a tab bar to filter products by category.
     ### Admin Page
 
-    The admin page provides functionality for administrators to manage products, including adding new products, editing existing ones, and deleting products.
+  The admin page provides functionality for administrators to manage products, including adding new products, editing existing ones, and deleting products.
 
-    ## Features
+   ## Features
 
-    - **Product Management**: Administrators can add, edit, update, and delete products.
+   - **Product Management**: Administrators can add, edit, update, and delete products.
     - **Dynamic Display**: Products are dynamically displayed based on their categories.
     - **Shared Components**: Includes shared components like buttons, dialogs, and pipes for consistent UI elements across the application.
     - **Angular Material**: Utilized for UI components such as buttons, dialogs, navbar, and tabs.
@@ -23,9 +31,9 @@
     - **NgRx**: State management using NgRx, including actions, effects, reducers, and selectors.
     - **Faker**: Used to generate dummy data for demonstration purposes.
 
-    ## Technologies Used
+  ## Technologies Used
 
-    - Angular
+  - Angular
     - Angular Material
     - Tailwind CSS
     - NgRx
@@ -52,31 +60,31 @@
 
     1. **Clone the repository**:
         ```bash
-        git clone https://github.com/yarob-alrifai/angular-ngrx-products.git
+     git clone https://github.com/yarob-alrifai/angular-ngrx-products.git
         cd angular-ngrx-products
         ```
 
     2. **Install dependencies**:
         ```bash
-        npm install
+     npm install
         ```
 
     3. **Generate dummy data**:
         ```bash
-        npm run generate
+     npm run generate
         ```
 
     4. **Start the JSON Server backend**:
         ```bash
-        npm run server
+     npm run server
         ```
 
     5. **Start the Angular frontend**:
         ```bash
-        npm start
+      npm start
         ```
 
-    6. **Open your browser and navigate to** `http://localhost:4200`
+6. **Open your browser and navigate to** `http://localhost:4200`
 
     ## Project Structure
 
