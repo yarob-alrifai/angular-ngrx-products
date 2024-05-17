@@ -28,7 +28,6 @@ import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './admin/admin.component';
 import { AdminModule } from './admin/admin.module';
-import { HomeComponent } from './home/home.component';
 import { ItemProductDialogComponent } from './shared/components/dialog/item-product-dialog/item-product-dialog.component';
 
 const mats = [
@@ -58,7 +57,6 @@ const products = [
     AppComponent,
     NavbarComponent,
     ProductsComponent,
-    HomeComponent,
 
   ],
   imports: [
