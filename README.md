@@ -76,6 +76,22 @@ To get started with this project, follow these steps:
 - **services/**: Contains the service used to connect to the JSON server and manage product data.
 - **components/**: Contains Angular components for product display and administration.
 
+## Usage
+
+### Product Management
+
+The application allows you to manage products, including adding, editing, and deleting products. Products are displayed in a list format with a tab bar to filter products by category.
+
+### Admin Page
+
+The admin page provides functionality for administrators to manage products, including adding new products, editing existing ones, and deleting products.
+
+## Folder Structure
+
+- **src/app/shared**: Contains shared components, pipes, and modules used across the application.
+- **src/app/services**: Contains services for interacting with the backend.
+- **src/app/store**: Contains NgRx state management setup, including actions, effects, reducers, and selectors.
+
 ## Scripts
 
 - `npm start`: Starts the Angular development server.
@@ -95,4 +111,12 @@ To get started with this project, follow these steps:
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+We welcome contributions from the community. Please see the [CONTRIBUTING](CONTRIBUTING.md) file for more details.
+
+## Code of Conduct
+
+Please adhere to the [Code of Conduct](CODE_OF_CONDUCT.md) in all interactions with the project.
