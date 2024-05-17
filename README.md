@@ -17,7 +17,7 @@
   ### Product Management
 
   The application allows you to manage products, including adding, editing, and deleting products. Products are displayed in a list format with a tab bar to filter products by category.
-    ### Admin Page
+  ### Admin Page
 
   The admin page provides functionality for administrators to manage products, including adding new products, editing existing ones, and deleting products.
 
