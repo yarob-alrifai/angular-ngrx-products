@@ -24,18 +24,18 @@
 
    ## Features
 
-   - **Product Management**: Administrators can add, edit, update, and delete products.
-    - **Dynamic Display**: Products are dynamically displayed based on their categories.
-    - **Shared Components**: Includes shared components like buttons, dialogs, and pipes for consistent UI elements across the application.
-    - **Angular Material**: Utilized for UI components such as buttons, dialogs, navbar, and tabs.
-    - **Tailwind CSS**: Used for styling to create a responsive and visually appealing UI.
-    - **NgRx**: State management using NgRx, including actions, effects, reducers, and selectors.
-    - **Faker**: Used to generate dummy data for demonstration purposes.
+  - **Product Management**: Administrators can add, edit, update, and delete products.
+  - **Dynamic Display**: Products are dynamically displayed based on their categories.
+  - **Shared Components**: Includes shared components like buttons, dialogs, and pipes for consistent UI elements across the application.
+  - **Angular Material**: Utilized for UI components such as buttons, dialogs, navbar, and tabs.
+  - **Tailwind CSS**: Used for styling to create a responsive and visually appealing UI.
+  - **NgRx**: State management using NgRx, including actions, effects, reducers, and selectors.
+  - **Faker**: Used to generate dummy data for demonstration purposes.
 
   ## Technologies Used
 
   - Angular
-    - Angular Material
+  - Angular Material
     - Tailwind CSS
     - NgRx
     - RxJS
