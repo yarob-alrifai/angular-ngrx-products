@@ -61,8 +61,8 @@
 
     1. **Clone the repository**:
         ```bash
-     git clone https://github.com/yarob-alrifai/angular-ngrx-products.git
-        cd angular-ngrx-products
+      git clone https://github.com/yarob-alrifai/angular-ngrx-products.git
+     cd angular-ngrx-products
         ```
 
     2. **Install dependencies**:
