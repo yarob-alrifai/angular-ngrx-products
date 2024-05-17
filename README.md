@@ -23,11 +23,19 @@ This project demonstrates using NgRx to manage product-related actions such as a
 - JSON Server
 
   
+
 ## Screenshots
 
+### Product List
+The product list page displays all products, categorized by tabs for easy navigation.
+
 ![Product List](./screenshots/product-list.png)
+
+### Admin Page
+The admin page allows administrators to add new products, edit existing products, delete products, and view product details.
+
 ![Admin Page 1](./screenshots/admin-page-1.png)
-![Admin Page 1](./screenshots/admin-page-2.png)
+![Admin Page 2](./screenshots/admin-page-2.png)
 
 ## Getting Started
 
