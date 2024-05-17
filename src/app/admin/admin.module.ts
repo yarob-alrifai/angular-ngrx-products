@@ -50,7 +50,7 @@ SharedModule,
     MatIconModule,
 
     MatListModule,
-    EffectsModule.forRoot([
+    EffectsModule.forFeature([
       ProductStoreEffects,
       AdminModule,
       BrowserModule,
@@ -63,9 +63,7 @@ SharedModule,
       MatFormFieldModule,
     ]),
 
-    StoreModule.forRoot({
-      product: productReducer,
-    }),
+
   ],
 })
 export class AdminModule {}

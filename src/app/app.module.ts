@@ -71,6 +71,7 @@ const products = [
     }),
     EffectsModule.forRoot([
       ProductStoreEffects,
+
     ]),
   ],
   providers: [
