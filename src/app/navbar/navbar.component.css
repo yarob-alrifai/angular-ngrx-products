@@ -1,0 +1,21 @@
+
+.content {
+  margin-top: 64px; /* Adjust based on the height of the toolbar */
+}
+
+.active-button {
+  background-color: rgb(85, 13, 194); /* Change to the desired background color */
+  color: white; /* Change to the desired text color */
+}
+
+.fixed-toolbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the toolbar is above other content */
+}
+
+
+.active-button {
+  background-color: rgba(255, 255, 255, 0.2); /* Change this as needed for the active state */
+}

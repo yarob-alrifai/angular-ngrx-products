@@ -14,8 +14,9 @@ const adminRoutes: Routes = [
 
     component: AdminComponent,
     children: [
+      { path: '', redirectTo: 'products', pathMatch: 'full' }, // Default route
       { path: 'products', component: ProductsComponent },
-      { path: 'add-product', component: AddProductComponent },
+      { path: 'add-product', component: AddProductComponent }
 
 
     ]

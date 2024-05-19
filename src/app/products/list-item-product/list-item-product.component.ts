@@ -1,20 +1,15 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Product } from '../../store/product/product';
 
 @Component({
   selector: 'app-list-item-product',
   templateUrl: './list-item-product.component.html',
-  styleUrl: './list-item-product.component.css'
+  styleUrls: ['./list-item-product.component.css']
 })
 export class ListItemProductComponent {
-  @Input()
-  products!: Product[];
+  // Input property to receive an array of products
+  @Input() products!: Product[];
 
+  constructor() { }
 
-
-ngOnDestroy(): void {
-  //Called once, before the instance is destroyed.
-  //Add 'implements OnDestroy' to the class.
-
-}
 }

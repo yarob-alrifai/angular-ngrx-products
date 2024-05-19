@@ -11,7 +11,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { ButtonComponent } from './buttons/button/button.component';
-import { MiniButtonComponent } from './buttons/mini-button/mini-button.component';
 import { DeleteDialogComponent } from './components/dialog/delete-dialog/delete-dialog.component';
 import { UpdateItemProductDialogComponent } from './components/dialog/update-item-product-dialog/update-item-product-dialog.component';
 import { FormsModule } from '@angular/forms';
@@ -30,8 +29,8 @@ const mats = [
 ];
 
 @NgModule({
-  declarations: [ValuesPipe, ButtonComponent, MiniButtonComponent, DeleteDialogComponent, UpdateItemProductDialogComponent, MessageDialogComponent],
+  declarations: [ValuesPipe, ButtonComponent, DeleteDialogComponent, UpdateItemProductDialogComponent, MessageDialogComponent],
   imports: [CommonModule, mats],
-  exports: [ValuesPipe, ButtonComponent, MiniButtonComponent],
+  exports: [ValuesPipe, ButtonComponent],
 })
 export class SharedModule {}

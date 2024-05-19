@@ -1,10 +1,9 @@
-
-import { Component } from '@angular/core';
-import { EMPTY, Observable, Subscription, map } from 'rxjs';
+import { Component, OnDestroy } from '@angular/core';
+import { EMPTY, Observable, Subscription, Subject } from 'rxjs';
+import { map, takeUntil } from 'rxjs/operators';
 import { Product, ProductState } from '../../store/product/product';
 import { Store } from '@ngrx/store';
 import {
-  clearProducts,
   deleteProductRequest,
   loadProductsRequest,
   updateProductRequest,
@@ -22,88 +21,100 @@ import { UpdateItemProductDialogComponent } from '../../shared/components/dialog
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrl: './products.component.css',
+  styleUrls: ['./products.component.css'],
 })
-export class ProductsComponent {
-  // red my subscribtions
-  // Declare subscriptions
-  private subscriptions: Subscription[] = [];
+export class ProductsComponent implements OnDestroy {
+  // Subject for unsubscribing from observables
+  private unsubscribe$: Subject<void> = new Subject();
 
-  // red declration my variable
+  // Observable to hold products data
   products$: Observable<Product[]> = EMPTY;
-  myProducts: Observable<Product[]> = EMPTY;
+
+  // Observable to track loading state
   loading$: Observable<boolean> = EMPTY;
+
+  // Observable to handle error state
   error$: Observable<any> = EMPTY;
 
-  // categories$: Observable<Category[]> = EMPTY;
+  // Object to hold products categorized by their category
   productsWithCategory: { [category: string]: Product[] } = {};
 
   constructor(
     private storeProduct$: Store<ProductState>,
     private dialog: MatDialog,
-    public dialog_delete: MatDialog,
   ) {}
+
   ngOnInit(): void {
-    this.storeProduct$.dispatch(clearProducts());
+    // Initialize productsWithCategory object
     this.productsWithCategory = {};
-    // green get all products
+
+    // Dispatch action to load products
     this.storeProduct$.dispatch(loadProductsRequest());
-    this.products$ = this.storeProduct$
-      .select(getAllproductSelector)
-      .pipe(map((products) => products.map((product) => ({ ...product }))));
+
+    // Subscribe to the products observable and map the products to add to the productsWithCategory object
+    this.products$ = this.storeProduct$.select(getAllproductSelector).pipe(
+      map((products) => products.map((product) => ({ ...product })))
+    );
+
+    // Subscribe to loading state
     this.loading$ = this.storeProduct$.select(getLoadingSelector);
+
+    // Subscribe to error state
     this.error$ = this.storeProduct$.select(getErrorSelector);
   }
-  // blue this for get key from the object
+
+  // Function to get keys from an object
   objectKeys(obj: any): any {
     return Object.keys(obj);
   }
-  ngOnDestroy(): void {
-    // Unsubscribe from all subscriptions
-    this.subscriptions.forEach((subscription) => subscription.unsubscribe());
-    // this is to brevent repeat items in the array
-    this.storeProduct$.dispatch(clearProducts());
-  }
 
+  // Function to open dialog to display product details
   openDialog(value: Product): void {
     const dialogRef = this.dialog.open(ItemProductDialogComponent, {
-      // Pass the function as data to the dialog
       data: {
         item: value,
       },
     });
   }
+
+  // Function to open dialog to edit product
   editProduct(product: Product) {
-
-
-    let dialogRef = this.dialog_delete.open(UpdateItemProductDialogComponent, {
+    const dialogRef = this.dialog.open(UpdateItemProductDialogComponent, {
       width: '250px',
       data: { product: product },
     });
 
-    dialogRef.afterClosed().subscribe((updatedProduct) => {
-      console.log(updatedProduct);
-      if (updatedProduct) {
-        // console.log(updatedProduct);
-         this.storeProduct$.dispatch(updateProductRequest({updatedProduct}))
-      }
+    // Subscribe to dialog close event to update product
+    dialogRef
+      .afterClosed()
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe((updatedProduct) => {
+        if (updatedProduct) {
+          this.storeProduct$.dispatch(updateProductRequest({ updatedProduct }));
+        }
+      });
+  }
+
+  // Function to open dialog to confirm product deletion
+  deleteProduct(productId: string) {
+    const dialogRef = this.dialog.open(DeleteDialogComponent, {
+      width: '250px',
     });
 
-
+    // Subscribe to dialog close event to delete product
+    dialogRef
+      .afterClosed()
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe((result) => {
+        if (result) {
+          this.storeProduct$.dispatch(deleteProductRequest({ productId }));
+        }
+      });
   }
-  deleteProduct(productId: string) {
 
-let dialogRef = this.dialog_delete.open(DeleteDialogComponent, {
-  width: '250px',
-});
-
-dialogRef.afterClosed().subscribe((result) => {
-  console.log('The dialog was closed');
-  if (result) {
-    console.log(productId);
-    this.storeProduct$.dispatch(deleteProductRequest({productId}))
-  }
-});
-
+  // Unsubscribe from observables to prevent memory leaks
+  ngOnDestroy(): void {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 }

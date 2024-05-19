@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { AdminRoutingModule } from './admin-routing.module';
-
 import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -10,11 +8,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { EffectsModule } from '@ngrx/effects';
-
 import { ProductStoreEffects } from '../store/product/product.effect';
-import { StoreModule } from '@ngrx/store';
-
-import { productReducer } from '../store/product/product.reducer';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserModule } from '@angular/platform-browser';
@@ -48,15 +42,14 @@ SharedModule,
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-
     MatListModule,
     EffectsModule.forFeature([
       ProductStoreEffects,
       AdminModule,
       BrowserModule,
       BrowserAnimationsModule,
-      FormsModule, // Add if using forms
-      ReactiveFormsModule, // Add if using reactive forms
+      FormsModule,
+      ReactiveFormsModule,
       MatTableModule,
       MatSortModule,
       MatPaginatorModule,

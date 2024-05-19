@@ -1,25 +1,26 @@
-<div>
-  <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #drawer class="sidenav" fixedTopGap
+<div class="full-height">
+  <mat-sidenav-container class="sidenav-container full-height">
+    <mat-sidenav #drawer class="sidenav full-height"
+    [fixedInViewport]="true"
+    fixedTopGap="64"
+    fixedBottomGap="0"
+
         [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
         [mode]="(isHandset$ | async) ? 'over' : 'side'"
         [opened]="(isHandset$ | async) === false">
       <mat-toolbar>Menu</mat-toolbar>
       <mat-nav-list>
-        <a mat-list-item  (click)="routingToProducts()">Products</a>
-        <a mat-list-item  (click)="routingToAddProducts()">Add Products</a>
+        <a mat-list-item [ngClass]="{ 'active-link': isActiveProductLink }" (click)="routingToProducts()">Products</a>
+        <a mat-list-item [ngClass]="{ 'active-link': isActiveAddProductLink }" (click)="routingToAddProducts()">Add Products</a>
       </mat-nav-list>
     </mat-sidenav>
-    <mat-sidenav-content class="content-container">
-      <mat-toolbar color="primary " >
-        <button *ngIf="(isHandset$ | async)" type="button" aria-label="Toggle sidenav" (click)="drawer.toggle()" class="block lg:hidden">
-          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
+    <mat-sidenav-content class="content-container full-height">
+      <!-- <mat-toolbar color="primary" class="mat-elevation-z8">
+        <button *ngIf="(isHandset$ | async)" type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
         </button>
         <span>Admin</span>
-      </mat-toolbar>
+      </mat-toolbar> -->
       <!-- Add Content Here -->
       <router-outlet></router-outlet>
     </mat-sidenav-content>

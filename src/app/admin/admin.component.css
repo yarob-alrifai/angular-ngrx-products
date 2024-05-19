@@ -1,24 +1,32 @@
+.full-height {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .sidenav-container {
-  height: 100%;
+  display: flex;
+  flex: 1;
 }
 
-.sidenav {
-  width: 200px;
+.mat-sidenav-content {
+  display: flex;
+  flex-direction: column;
 }
 
-.sidenav .mat-toolbar {
-  background: inherit;
-}
-
-.mat-toolbar.mat-primary {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
 .content-container {
-  height: calc(100vh - 64px); /* Adjust 64px to match the height of your toolbar */
-  overflow-y: auto;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
-.toolbar {
-  z-index: 1000; /* Adjust the value as needed */
+
+.router-outlet {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style for active link */
+.active-link {
+  background-color: rgba(0, 0, 0, 0.1); /* Adjust the color as needed */
 }

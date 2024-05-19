@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Product } from '../../store/product/product';
 import { ItemProductDialogComponent } from '../../shared/components/dialog/item-product-dialog/item-product-dialog.component';
@@ -9,38 +9,17 @@ import { ItemProductDialogComponent } from '../../shared/components/dialog/item-
   styleUrls: ['./item-product.component.css'],
 })
 export class ItemProductComponent {
+  // Input property to receive a single product item
   @Input() item!: Product;
 
-
   constructor(private dialog: MatDialog) {}
-ngOnInit(): void {
-  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-  //Add 'implements OnInit' to the class.
 
-}
-
-
-  ngOnDestroy(): void {
-    //Called once, before the instance is destroyed.
-    //Add 'implements OnDestroy' to the class.
-
-  }
-  openDialog(value:Product): void {
+  // Method to open the dialog for displaying product details
+  openDialog(value: Product): void {
     const dialogRef = this.dialog.open(ItemProductDialogComponent, {
-      // Pass the function as data to the dialog
       data: {
-        item: value,
-
+        item: value, // Pass the product data to the dialog component
       }
     });
-
-
   }
-
-
-
-
-
-
-
 }

@@ -1,8 +1,7 @@
-import { Component, EventEmitter, Inject, Input, Output } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { EMPTY } from 'rxjs';
-import { Product } from '../../../../store/product/product';
 
+import { Product } from '../../../../store/product/product';
 
 @Component({
   selector: 'app-item-product-dialog',
@@ -10,17 +9,23 @@ import { Product } from '../../../../store/product/product';
   styleUrl: './item-product-dialog.component.css'
 })
 export class ItemProductDialogComponent {
-  item: Product | undefined =undefined
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any, public dialogRef: MatDialogRef<ItemProductDialogComponent>,) {
-    this.item=this.data.item
+  item: Product | undefined = undefined; // Define item property and initialize with undefined
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: any, // Inject data passed to the dialog
+    public dialogRef: MatDialogRef<ItemProductDialogComponent>, // Reference to the dialog
+  ) {
+    // Initialize item with the data passed to the dialog
+    this.item = this.data.item;
   }
 
   ngOnInit(): void {
-    window.scrollTo(0, 0)
-
+    // Scroll to the top of the page when the dialog is opened
+    window.scrollTo(0, 0);
   }
 
+  // Method triggered when cancel button is clicked
   onNoClick(): void {
+    // Close the dialog
     this.dialogRef.close();
   }
 }
