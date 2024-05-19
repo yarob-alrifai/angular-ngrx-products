@@ -1,0 +1,11 @@
+{
+  "routes": [
+    "/admin",
+    "/admin/add-product",
+    "/admin/admin",
+    "/admin/admin/add-product",
+    "/admin/admin/products",
+    "/admin/products",
+    "/products"
+  ]
+}
