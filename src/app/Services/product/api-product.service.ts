@@ -5,8 +5,6 @@ import { Product } from './../../store/product/product';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-// Import the ProductFeature selector (though it is not used in this service)
-import { ProductFeature } from '../../store/product/product.selector';
 
 // Decorator to make the service injectable and provided at the root level
 @Injectable({
@@ -14,6 +12,7 @@ import { ProductFeature } from '../../store/product/product.selector';
 })
 export class ApiProductService {
   // Base URL for the product API
+
   private URL = "http://localhost:3000/products/";
 
   // Inject the HttpClient service for making HTTP requests
