@@ -4,6 +4,7 @@ import { map, takeUntil } from 'rxjs/operators';
 import { Product, ProductState } from '../../store/product/product';
 import { Store } from '@ngrx/store';
 import {
+  clearProducts,
   deleteProductRequest,
   loadProductsRequest,
   updateProductRequest,
@@ -116,5 +117,7 @@ export class ProductsComponent implements OnDestroy {
   ngOnDestroy(): void {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
+    this.storeProduct$.dispatch(clearProducts());
+
   }
 }

@@ -4,6 +4,7 @@ import {
   addProductFailure,
   addProductRequest,
   addProductSuccess,
+  clearProducts,
   deleteProductFaild,
   deleteProductRequest,
   deleteProductSuccess,
@@ -105,5 +106,10 @@ export const productReducer = createReducer(
     ...state,
     loading: false,
     error: error,
+  }))
+  ,
+  on(clearProducts, (state) => ({
+    // Return the initial state or an empty cart state
+    ...initialStateProducts,
   }))
 );

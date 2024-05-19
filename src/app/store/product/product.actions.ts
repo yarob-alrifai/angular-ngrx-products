@@ -78,3 +78,6 @@ export const addProductFailure = createAction(
   '[Product] Add Product Failure',
   props<{ error: any }>()
 );
+
+export const clearProducts = createAction('[product component] Clear Products');
+

@@ -6,7 +6,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 
-// Decorator to make the service injectable and provided at the root level
 @Injectable({
   providedIn: 'root'
 })

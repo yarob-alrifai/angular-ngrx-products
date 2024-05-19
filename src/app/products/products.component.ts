@@ -3,7 +3,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { EMPTY, Observable, Subscription } from 'rxjs';
 import { ProductState } from '../store/product/product';
-import { loadProductsRequest } from '../store/product/product.actions';
+import { clearProducts, loadProductsRequest } from '../store/product/product.actions';
 import { getAllproductSelector, getErrorSelector, getLoadingSelector } from '../store/product/product.selector';
 
 @Component({
@@ -53,5 +53,6 @@ export class ProductsComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
     this.subscriptions.forEach((subscription) => subscription.unsubscribe());
+    this.storeProduct$.dispatch(clearProducts());
   }
 }
