@@ -23,6 +23,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+
+            "baseHref": "/angular-ngrx-products/",
             "outputPath": "dist/ngrx-demo",
             "index": "src/index.html",
             "browser": "src/main.ts",
