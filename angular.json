@@ -25,7 +25,7 @@
           "options": {
 
             "baseHref": "/angular-ngrx-products/",
-            "outputPath": "dist/ngrx-demo",
+            "outputPath": "docs",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
